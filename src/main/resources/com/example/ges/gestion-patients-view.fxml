@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="502.0" prefWidth="601.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ges.PatientsController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <TabPane fx:id="tpMenu" prefHeight="503.0" prefWidth="561.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Patients">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <HBox layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="533.0">
+                                    <children>
+                                        <Label text="Nom" />
+                                        <TextField fx:id="rnomP" />
+                                        <Button fx:id="btnRechercherP" mnemonicParsing="false" text="Rechercher" />
+                                    </children>
+                                </HBox>
+                                <TableView fx:id="tabPatients" layoutX="10.0" layoutY="58.0" prefHeight="294.0" prefWidth="542.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="C1" />
+                                        <TableColumn prefWidth="75.0" text="C2" />
+                                    </columns>
+                                </TableView>
+                                <HBox alignment="CENTER" layoutX="11.0" layoutY="355.0" prefHeight="34.0" prefWidth="541.0">
+                                    <children>
+                              <Button fx:id="btnAddMedicament" mnemonicParsing="false" text="Ajouter Medicament" />
+                                        <Button fx:id="btnSupprimerP" mnemonicParsing="false" text="Supprimer" textFill="RED" />
+                                        <Button fx:id="btnSupprimerToutP" mnemonicParsing="false" text="Supprimer Tout" />
+                              <Button fx:id="gererPdfButton" mnemonicParsing="false" text="PDF" />
+                                        <Button fx:id="btnQuitter" mnemonicParsing="false" text="Quitter" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Ajouter">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="222.0" prefWidth="523.0" spacing="20.0">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <children>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" text="Cin" />
+                                                        <TextField fx:id="tfCinP" prefHeight="25.0" prefWidth="396.0" />
+                                                    </children>
+                                                </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="96.0" text="nom" />
+                                          <TextField fx:id="tfNomP" prefHeight="25.0" prefWidth="384.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="96.0" text="prenom" />
+                                          <TextField fx:id="tfPrenomP" prefHeight="25.0" prefWidth="389.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="98.0" text="sexe" />
+                                          <TextField fx:id="tfSexeP" prefHeight="25.0" prefWidth="382.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="97.0" text="tel" />
+                                          <TextField fx:id="tfTelP" prefHeight="25.0" prefWidth="384.0" />
+                                       </children>
+                                    </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Button fx:id="btnAjouterP" mnemonicParsing="false" text="+" />
+                                                        <Button mnemonicParsing="false" text="Annuler" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Modification">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="244.0" prefWidth="523.0" spacing="20.0">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <children>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefHeight="17.0" prefWidth="94.0" text="Id" />
+                                                        <ComboBox fx:id="cbId" prefWidth="150.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" text="Cin" />
+                                                        <TextField fx:id="tfCinPM" prefHeight="25.0" prefWidth="396.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" text="Nom" />
+                                          <TextField fx:id="tfNomPM" prefHeight="25.0" prefWidth="370.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefHeight="17.0" prefWidth="102.0" text="Prenom" />
+                                          <TextField fx:id="tfPrenomPM" prefHeight="25.0" prefWidth="362.0" />
+                                                    </children>
+                                                </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="100.0" text="sexe" />
+                                          <TextField fx:id="tfSexePM" prefHeight="25.0" prefWidth="367.0" />
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="97.0" text="Tel" />
+                                          <TextField fx:id="tfTelPM" prefHeight="25.0" prefWidth="369.0" />
+                                       </children></HBox>
+                                            </children>
+                                        </VBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                              <children>
+                                                  <Button fx:id="btnModifierPM" mnemonicParsing="false" text="Modifier" />
+                                                  <Button fx:id="btnAnnulerPM" mnemonicParsing="false" text="Annuler" />
+                                              </children>
+                                          </HBox>
+                                    </children>
+                                </VBox>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="medicamnet">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <HBox layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="533.0">
+                                    <children>
+                                        <Label text="Titre" />
+                                        <TextField fx:id="libelleM" />
+                                        <Button fx:id="btnRechercherM" mnemonicParsing="false" text="Rechercher" />
+                                    </children>
+                                </HBox>
+                                <TableView fx:id="tabLivres" layoutX="10.0" layoutY="58.0" prefHeight="294.0" prefWidth="542.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="C1" />
+                                        <TableColumn prefWidth="75.0" text="C2" />
+                                    </columns>
+                                </TableView>
+                                <HBox alignment="CENTER" layoutX="11.0" layoutY="355.0" prefHeight="34.0" prefWidth="541.0">
+                                    <children>
+                                        <Button fx:id="btnSupprimerM" mnemonicParsing="false" text="Supprimer">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font></Button>
+                                        <Button fx:id="btnSupprimerToutM" mnemonicParsing="false" text="Supprimer Tout" />
+                                        <Button fx:id="btnQuitterM" mnemonicParsing="false" text="Quitter" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+
+            </tabs>
+        </TabPane>
+    </children>
+
+
+</VBox>
