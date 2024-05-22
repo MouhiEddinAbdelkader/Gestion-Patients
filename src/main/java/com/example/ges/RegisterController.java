@@ -82,7 +82,7 @@ public class RegisterController implements Initializable {
 
                         ps.executeUpdate();
                         clearForm();
-                        navigateToHomeView();
+                        showLoginStage();
                         showAlert(Alert.AlertType.INFORMATION, "Success", "Registration successful.");
                     }
                 } else {
